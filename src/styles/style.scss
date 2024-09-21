@@ -1,0 +1,138 @@
+@import "normalize";
+
+@import "settings";
+
+.container {
+  padding-right: min(4.39vw, 60px);
+  padding-left: min(4.39vw, 60px);
+}
+
+.header {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  padding-block: min(1.46vw, 20px);
+
+  &__container {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logoBlock {
+    width: min(13.91vw, 190px) ;
+    height: min(3.37vw, 46px);
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    fill: #192632;
+  }
+
+  & nav {
+    & ul {
+      column-gap: min(2.93vw, 40px);
+    }
+  }
+
+  &__linkNav {
+    font-size: min(1.46vw, 20px);
+    font-weight: 400;
+    line-height: min(1.68vw, 23px);
+    color: #192632;
+  }
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 25%;
+    min-height: min(58.57vw, 800px);
+    background-color: #fc0000;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 2;
+    flex-direction: column;
+    min-height: inherit;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 3;
+      right: 0;
+      width: min(33.16vw, 453px);
+      min-height: min(58.57vw, 800px);
+      background-color: #fc0000;
+
+      clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+  }
+
+  h1 {
+    position: relative;
+    right: min(.73vw, 10px);
+    max-width: min(58.13vw, 794px);
+    margin-bottom: min(3.66vw, 50px);
+    font-family: "Soviet";
+    font-size: min(7.32vw, 100px);
+    font-weight: 400;
+    line-height: min(10.98vw, 150px);
+    color: #192632;
+    letter-spacing: .02em;
+  }
+
+  &__descr {
+    margin-top: min(13.47vw, 184px);
+    font-size: min(2.20vw, 30px);
+    font-weight: 400;
+    font-style: italic;
+    line-height: min(2.49vw, 34px);
+    color: #fc0000;
+  }
+
+  &__img {
+    position: absolute;
+    z-index: 4;
+    right: min(1.02vw, 14px);
+    width: min(63.76vw, 871px);
+    height: min(53.59vw, 732px);
+    margin-top: min(4.98vw, 68px);
+
+    & img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+    }
+  }
+
+  & button {
+    align-items: center;
+    justify-content: center;
+    width: min(15.01vw, 205px);
+    padding: min(1.17vw, 16px) min(1.68vw, 23px) min(.81vw, 11px);
+    font-size: min(1.46vw, 20px);
+    font-weight: 400;
+    line-height: min(1.68vw, 23px);
+    color: #f1f1f1;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    background-color: #fc0000;
+
+    clip-path: polygon(7% 0, 100% 0%, 94% 100%, 0% 100%);
+  }
+}
