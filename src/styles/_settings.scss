@@ -59,11 +59,12 @@ html {
 body {
   position: relative;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   min-width: 360px;
   min-height: 100vh;
   font-family: "TT-Commons", "Soviet", sans-serif;
-  background-color: yellow;
+  background-color: #f1e7d4;
 }
 
 section {

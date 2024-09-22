@@ -29,7 +29,7 @@
         </div>
     </header>
     <main>
-        <section class="hero">
+        <section class="hero contentScroll">
             <div class="container hero__container flex">
                 <span class="hero__descr">
                     Быстрый. Дерзкий
@@ -50,7 +50,58 @@
                 </div>
             </div>
         </section>
-        <section></section>
+        <section class="main">
+            <div class="main__container container">
+                <div class="main__back flex">
+                    <div class="main__backTxtBlock main__backTxtBlock_top flex">
+                        <span class="main__backTxt">видео</span>
+                        <span class="main__backTxt">видео</span>
+                        <span class="main__backTxt">видео</span>
+                        <span class="main__backTxt">видео</span>
+                        <span class="main__backTxt">видео</span>
+                        <span class="main__backTxt">видео</span>
+                        <span class="main__backTxt">видео</span>
+                        <span class="main__backTxt">видео</span>
+                        <span class="main__backTxt">видео</span>
+                        <span class="main__backTxt">видео</span>
+                    </div>
+                    <div class="main__backTxtBlock main__backTxtBlock_bottom flex">
+                        <span class="main__backTxt">видео</span>
+                        <span class="main__backTxt">видео</span>
+                        <span class="main__backTxt">видео</span>
+                        <span class="main__backTxt">видео</span>
+                        <span class="main__backTxt">видео</span>
+                        <span class="main__backTxt">видео</span>
+                        <span class="main__backTxt">видео</span>
+                        <span class="main__backTxt">видео</span>
+                        <span class="main__backTxt">видео</span>
+                        <span class="main__backTxt">видео</span>
+                    </div>
+                </div>
+                <div class="main__contentBlock flex">
+                    <div class="contentScroll">
+                        <div class="main__content">
+                            <video class="main__video" muted playsinline poster="img/poster.webp">
+                                <source src="video/Video.mp4" type="video/mp4">
+                                Ваш браузер не поддерживает встроенные видео :(
+                            </video>
+                        </div>
+                    </div>
+                    <div class="contentScroll">
+                        <div class="main__content">
+                            <picture>
+                                <img class="main__img" src="img/main.webp"
+                                srcset="
+                                img/main_2x.webp 2x,
+                                img/main_3x.webp 3x
+                                "
+                                alt="Велосипед">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer></footer>
     <script src="js/main.min.js"></script>

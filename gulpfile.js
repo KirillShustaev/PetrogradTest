@@ -32,6 +32,10 @@ const path = {
     fonts: {
         src: "src/fonts/*",
         dest: "dist/fonts/"
+    },
+    video: {
+        src: "src/video/*",
+        dest: "dist/video/"
     }
 }
 
@@ -41,8 +45,8 @@ function clean() {
 
 function html() {
     return gulp.src(path.html.src)
-      .pipe(htmlmin({ 
-        collapseWhitespace: true 
+      .pipe(htmlmin({
+        collapseWhitespace: true
     }))
       .pipe(gulp.dest(path.html.dest));
 }
@@ -90,6 +94,10 @@ function font() {
     return gulp.src(path.fonts.src)
         .pipe(gulp.dest(path.fonts.dest))
 }
+function vid() {
+    return gulp.src(path.video.src)
+        .pipe(gulp.dest(path.video.dest))
+}
 
 function watch() {
     gulp.watch(path.html.src, html)
@@ -97,9 +105,10 @@ function watch() {
     gulp.watch(path.scripts.src, scripts)
     gulp.watch(path.images.src, img)
     gulp.watch(path.fonts.src, font)
+    gulp.watch(path.video.src, vid)
 }
 
-const build = gulp.series(clean, gulp.parallel(html, styles, scripts, img, font),  watch)
+const build = gulp.series(clean, gulp.parallel(html, styles, scripts, img, font, vid),  watch)
 
 
 exports.html = html
